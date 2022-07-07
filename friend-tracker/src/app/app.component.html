@@ -1,0 +1,24 @@
+<h1>Friend Tracker</h1>
+<button (click)="sayHello()">Click me please!</button>
+<div class="content-container">
+  <div class="normal-container">
+    <app-profile-info
+      [person]="friendsData[0]"
+    ></app-profile-info>
+  </div>
+  <div class="scrolling-container">
+    <app-profile-info
+      [person]="friendsData[1]"
+    ></app-profile-info>
+  </div>
+  <div class="border-container">
+    <app-profile-info
+      [person]="friendsData[2]"
+    ></app-profile-info>
+  </div>
+  <div class="narrow-column-container">
+    <app-profile-info
+      [person]="friendsData[2]"
+    ></app-profile-info>
+  </div>
+</div>
