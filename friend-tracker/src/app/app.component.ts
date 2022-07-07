@@ -15,4 +15,8 @@ export class AppComponent {
   sayHello() {
     alert("Hello my friends!")
   }
+
+  onPersonClicked(person: Person): void {
+    alert(`${person.name} likes ${person.interests.join(', ')}`)
+  }
 }

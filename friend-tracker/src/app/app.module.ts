@@ -9,7 +9,7 @@ import { PersonCardComponent } from './person-card/person-card.component';
   declarations: [
     AppComponent,
     ProfileInfoComponent,
-    PersonCardComponent
+    PersonCardComponent,
   ],
   imports: [
     BrowserModule
