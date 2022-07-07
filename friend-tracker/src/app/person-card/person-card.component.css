@@ -27,4 +27,15 @@
     padding: 8px;
     border-radius: 8px;
     border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.card-favorite {
+    border: 1px solid #777;
+    background-color: lightgreen;
+    cursor: pointer;
+    display: flex;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }

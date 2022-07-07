@@ -9,9 +9,15 @@ import { Person } from 'src/types';
 export class PersonCardComponent implements OnInit {
   @Input() person!: Person
 
+  isFavorite: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleFavorite(): void {
+    this.isFavorite = !this.isFavorite
   }
 
 }
