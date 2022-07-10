@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Person } from 'src/types';
 
 @Component({
@@ -8,16 +8,20 @@ import { Person } from 'src/types';
 })
 export class PersonCardComponent implements OnInit {
   @Input() person!: Person
+  @Input() isFavorite: boolean = false;
 
-  isFavorite: boolean = false;
+  @Output() select = new EventEmitter<string>();
+
+  cardClass: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
+    this.cardClass = this.isFavorite ? 'card-favorite' : 'card'
   }
 
-  toggleFavorite(): void {
-    this.isFavorite = !this.isFavorite
+  cardClicked(): void {
+    this.select.emit(this.person.id)
   }
 
 }

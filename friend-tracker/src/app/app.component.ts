@@ -12,11 +12,21 @@ export class AppComponent {
   personData: Person = personData
   friendsData: Person[] = friendsData;
 
+  favoritesIds: string[] = [];
+
   sayHello() {
     alert("Hello my friends!")
   }
 
   onPersonClicked(person: Person): void {
     alert(`${person.name} likes ${person.interests.join(', ')}`)
+  }
+
+  toggleFavorite(personId: string): void {
+    if(this.favoritesIds.includes(personId)) {
+      this.favoritesIds = this.favoritesIds.filter(id => id != personId)
+    } else {
+      this.favoritesIds.push(personId)
+    }
   }
 }

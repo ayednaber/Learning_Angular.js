@@ -11,19 +11,28 @@
     ></app-profile-info>
   </div>
   <h2>My Friends</h2>
+  <h3>You have {{ favoritesIds.length }} favorites</h3>
   <div class="people-list">
     <div class="people-list-item">
       <app-person-card
         [person]="friendsData[0]"
+        [isFavorite]="favoritesIds.includes(friendsData[0].id)"
+        (select)="toggleFavorite($event)"
         ></app-person-card>
     </div>
     <div class="people-list-item">
       <app-person-card
-        [person]="friendsData[1]"></app-person-card>
+        [person]="friendsData[1]"
+        (select)="toggleFavorite($event)"
+        [isFavorite]="favoritesIds.includes(friendsData[1].id)"
+        ></app-person-card>
     </div>
     <div class="people-list-item">
       <app-person-card
-        [person]="friendsData[2]"></app-person-card>
+        [person]="friendsData[2]"
+        (select)="toggleFavorite($event)"
+        [isFavorite]="favoritesIds.includes(friendsData[2].id)"
+        ></app-person-card>
     </div>
   </div>
 </div>

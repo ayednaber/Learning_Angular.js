@@ -8,6 +8,7 @@ import { Person } from 'src/types';
 })
 export class ProfileInfoComponent implements OnInit {
   @Input() person: Person = {
+    id: "",
     name: "",
     profilePicURL: "",
     age: 0,

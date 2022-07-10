@@ -1,6 +1,7 @@
 import { Person } from "src/types";
 
 export const personData: Person = {
+    id: "1",
     name: "Ayed Naber",
     profilePicURL: "../../assets/personal_photo.jpg",
     age: 21,
@@ -11,6 +12,7 @@ export const personData: Person = {
 
 export const friendsData: Person[] = [
     {
+        id: "2",
         name: "Charlie Barrett",
         profilePicURL: "https://randomuser.me/api/portraits/men/44.jpg",
         age: 27,
@@ -19,6 +21,7 @@ export const friendsData: Person[] = [
         interests: ["Cycling", "Football"]
     },
     {
+        id: "3",
         name: "Allan Morales",
         profilePicURL: "https://randomuser.me/api/portraits/men/0.jpg",
         age: 43,
@@ -27,6 +30,7 @@ export const friendsData: Person[] = [
         interests: ["Smoking", "Watching TV"]
     },
     {
+        id: "4",
         name: "Ayed Naber",
         profilePicURL: "../../assets/personal_photo.jpg",
         age: 21,
