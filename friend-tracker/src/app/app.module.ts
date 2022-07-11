@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FriendsPageComponent } from './friends-page/friends-page.component';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
 import { FriendDetailPageComponent } from './friend-detail-page/friend-detail-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FriendDetailPageComponent } from './friend-detail-page/friend-detail-pa
     FriendsPageComponent,
     UserProfilePageComponent,
     FriendDetailPageComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
