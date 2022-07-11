@@ -1,0 +1,15 @@
+<div class="normal-container">
+  <app-welcome-banner [person]="personData"></app-welcome-banner>
+</div>
+
+  <h2>Favorites</h2>
+  <h3>You have {{ favoritesIds.length }} favorites</h3>
+  <app-people-list
+     [people]="favorites"
+     (clickPerson)="removeFavorite($event)"
+     ></app-people-list>
+  <h2>My Friends</h2>
+  <app-people-list
+     [people]="nonFavorites"
+     (clickPerson)="addFavorite($event)"
+  ></app-people-list>

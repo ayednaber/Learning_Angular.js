@@ -1,25 +1,5 @@
 <h1>Friend Tracker</h1>
-<div class="normal-container">
-  <app-welcome-banner [person]="personData"></app-welcome-banner>
-</div>
-
-<button (click)="sayHello()">Click me please!</button>
 <div class="content-container">
-  <div class="normal-container">
-    <app-profile-info
-      [person]="personData"
-    ></app-profile-info>
-  </div>
-  <h2>Favorites</h2>
-  <h3>You have {{ favoritesIds.length }} favorites</h3>
-  <app-people-list
-     [people]="favorites"
-     (clickPerson)="removeFavorite($event)"
-     ></app-people-list>
-  <h2>My Friends</h2>
-  <app-people-list
-     [people]="nonFavorites"
-     (clickPerson)="addFavorite($event)"
-  ></app-people-list>
+  <router-outlet></router-outlet>
 </div>
  
