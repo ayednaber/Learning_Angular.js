@@ -8,16 +8,12 @@ import { Person } from 'src/types';
 })
 export class PersonCardComponent implements OnInit {
   @Input() person!: Person
-  @Input() isFavorite: boolean = false;
 
   @Output() select = new EventEmitter<string>();
-
-  cardClass: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
-    this.cardClass = this.isFavorite ? 'card-favorite' : 'card'
   }
 
   cardClicked(): void {

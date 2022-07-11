@@ -1,0 +1,56 @@
+.profile-container {
+    margin-bottom: 100px;
+}
+
+.people-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.people-list-item {
+    box-sizing: border-box;
+    padding: 8px;
+    width: 45%;
+}
+
+.profile-pic-wrap {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #777;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.profile-pic-left {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 100%;
+}
+
+.card-details {
+    flex: 1;
+}
+
+.card {
+    display: flex;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.card-favorite {
+    border: 1px solid #777;
+    background-color: lightgreen;
+    cursor: pointer;
+    display: flex;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}

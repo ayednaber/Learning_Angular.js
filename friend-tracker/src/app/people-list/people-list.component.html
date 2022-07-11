@@ -1,0 +1,8 @@
+<div class="people-list">
+    <div class="people-list-item" *ngFor="let p of people">
+      <app-person-card
+        [person]="p"
+        (select)="personClicked($event)"
+        ></app-person-card>
+    </div>
+  </div>

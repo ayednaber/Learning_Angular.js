@@ -10,15 +10,16 @@
       [person]="personData"
     ></app-profile-info>
   </div>
-  <h2>My Friends</h2>
+  <h2>Favorites</h2>
   <h3>You have {{ favoritesIds.length }} favorites</h3>
-  <div class="people-list">
-    <div class="people-list-item" *ngFor="let p of friendsData">
-      <app-person-card
-        [person]="p"
-        [isFavorite]="favoritesIds.includes(p.id)"
-        (select)="toggleFavorite($event)"
-        ></app-person-card>
-    </div>
-  </div>
+  <app-people-list
+     [people]="favorites"
+     (clickPerson)="removeFavorite($event)"
+     ></app-people-list>
+  <h2>My Friends</h2>
+  <app-people-list
+     [people]="nonFavorites"
+     (clickPerson)="addFavorite($event)"
+  ></app-people-list>
 </div>
+ 

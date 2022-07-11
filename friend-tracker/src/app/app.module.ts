@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { PersonCardComponent } from './person-card/person-card.component';
 import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.component';
+import { PeopleListComponent } from './people-list/people-list.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { WelcomeBannerComponent } from './welcome-banner/welcome-banner.componen
     ProfileInfoComponent,
     PersonCardComponent,
     WelcomeBannerComponent,
+    PeopleListComponent,
   ],
   imports: [
     BrowserModule
