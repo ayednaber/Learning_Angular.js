@@ -9,6 +9,7 @@ import { PeopleListComponent } from './people-list/people-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FriendsPageComponent } from './friends-page/friends-page.component';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
+import { FriendDetailPageComponent } from './friend-detail-page/friend-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UserProfilePageComponent } from './user-profile-page/user-profile-page.
     PeopleListComponent,
     FriendsPageComponent,
     UserProfilePageComponent,
+    FriendDetailPageComponent,
   ],
   imports: [
     BrowserModule,
