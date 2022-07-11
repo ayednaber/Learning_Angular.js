@@ -8,6 +8,7 @@ import { Person } from 'src/types';
 })
 export class PersonCardComponent implements OnInit {
   @Input() person!: Person
+  @Input() selectFn: (personId: string) => void = () => {};
 
   @Output() select = new EventEmitter<string>();
 
@@ -17,7 +18,8 @@ export class PersonCardComponent implements OnInit {
   }
 
   cardClicked(): void {
-    this.select.emit(this.person.id)
+    // this.select.emit(this.person.id)
+    this.selectFn(this.person.id);
   }
 
 }

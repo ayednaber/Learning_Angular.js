@@ -2,7 +2,7 @@
     <div class="people-list-item" *ngFor="let p of people">
       <app-person-card
         [person]="p"
-        (select)="personClicked($event)"
+        [selectFn]="clickPersonFn"
         ></app-person-card>
     </div>
   </div>

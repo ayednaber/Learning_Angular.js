@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Person } from 'src/types';
 import { friendsData } from '../data';
 import { personData } from '../data';
@@ -23,14 +24,20 @@ export class FriendsPageComponent {
       !this.favoritesIds.includes(friend.id));
   }
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { };
 
-  addFavorite(personId: string): void {
+  addFavorite = (personId: string): void => {
     this.favoritesIds.push(personId)
   }
 
-  removeFavorite(personId: string): void {
+  removeFavorite = (personId: string): void => {
     this.favoritesIds = this.favoritesIds.filter(id => id != personId)
+  }
+
+  goToFriendDetailPage = (personId: string): void => {
+    this.router.navigateByUrl(`/friends/${personId}`)
   }
 
 }

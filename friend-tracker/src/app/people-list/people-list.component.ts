@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Person } from 'src/types';
 
 @Component({
@@ -8,16 +9,19 @@ import { Person } from 'src/types';
 })
 export class PeopleListComponent implements OnInit {
   @Input() people: Person[] = [];
+  @Input() clickPersonFn: (personId: string) => void = () => {};
 
-  @Output() clickPerson = new EventEmitter<string>();
+  // @Output() clickPerson = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
 
   personClicked(personID: string): void {
-    this.clickPerson.emit(personID); 
+    this.clickPersonFn(personID); 
   }
 
 }
